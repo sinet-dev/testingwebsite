@@ -1,0 +1,143 @@
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kantumruy', sans-serif;
+    font-weight:400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 20px;
+}
+
+.header {
+    height: 90vh;
+    background-image:linear-gradient( rgba(42, 54, 160, 0.3),rgba(88, 90, 88, 0.5)), url(../img/Lifescience-cover-no-title.png);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    position: relative;
+
+}
+
+.logo-box {
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%,-60%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: rgb(255, 255, 255);
+}
+
+.heading-primary-main {
+    display: block;
+    font-size:80px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+}
+
+.heading-primary-sub {
+
+    display: block;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom:30px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    80% {
+        transform: translateX(-7px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn-white {
+    background-color: #fff;
+    color:#777;
+    
+}
+.btn:link, 
+.btn:visited {
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 100px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0, 0.8);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out;
+    animation-fill-mode: backwards;
+    
+}
